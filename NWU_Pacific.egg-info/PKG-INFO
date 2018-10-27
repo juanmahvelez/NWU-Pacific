@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: NWU-Pacific
+Version: 0.1.0
+Summary: Machine Learning For Consumer Complaints
+Home-page: UNKNOWN
+Author: Juan Hernandez, Jeff Jarrard, Dale Mitchell, Simon Wilson
+License: UNKNOWN
+Description: # NWU-Pacific
+        NWU 2018 Pacific Team Repository
+        
+        ## Installation
+        Navigate to the root directory of the project.
+        
+        Run
+        ```
+        python setup.py install
+        ```
+Keywords: pacific
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Provides-Extra: dev

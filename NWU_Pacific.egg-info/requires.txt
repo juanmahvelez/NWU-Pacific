@@ -1,0 +1,15 @@
+gensim
+nltk
+spacy
+pandas
+numpy
+MarkupSafe
+jsonschema
+webencodings
+configparser
+ipykernel
+jupyter
+
+[dev]
+pytest
+flake8

@@ -7,7 +7,17 @@ with open('README.md') as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    'gensim', 'nltk'
+    'gensim',
+    'nltk',
+    'spacy',
+    'pandas',
+    'numpy',
+    'MarkupSafe',
+    'jsonschema',
+    'webencodings',
+    'configparser',
+    'ipykernel',
+    'jupyter'
 ]
 
 extras_require = {
