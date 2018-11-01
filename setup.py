@@ -17,7 +17,8 @@ requirements = [
     'webencodings',
     'configparser',
     'ipykernel',
-    'jupyter'
+    'jupyter',
+    'azure.storage.file'
 ]
 
 extras_require = {
