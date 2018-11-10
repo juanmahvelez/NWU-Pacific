@@ -1,7 +1,7 @@
 {
-    "object_dir": "my_dir/output/",
-    "model_dir": "my_dir/models/",
-    "log_dir": "my_dir/logs/",
+    "object_dir": "/Users/juanhernandez/Documents/NWU/data/output/",
+    "model_dir": "/Users/juanhernandez/Documents/NWU/data/models/",
+    "log_dir": "/Users/juanhernandez/Documents/NWU/data/logs/",
     "model_type": "LdaModel",
     "training_frac": 0.7,
     "model_args": {

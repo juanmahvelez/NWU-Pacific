@@ -26,8 +26,8 @@ def make_tfidf(texts=None, corpus=None, dictionary=None, object_dir=None):
         corpus = make_corpus(texts, dictionary, object_dir)
     tfidf = models.TfidfModel(corpus, dictionary)
     if object_dir is not None:
-    with open(object_dir + 'nostop_tfidf.pkl', 'w+') as f:
-        pickle.dump(tfidf, f)
+        with open(object_dir + 'nostop_tfidf.pkl', 'w+') as f:
+            pickle.dump(tfidf, f)
 
     # output idf values to a csv
     with open(idf_out, 'w+') as f:
