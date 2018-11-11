@@ -91,3 +91,8 @@ def evaluate(parameters, corpus_evaluation, model):
         return None
     else:
         return model.log_perplexity(corpus_evaluation)
+
+def get_topics(dictionary, text):
+    bow = corpora.Dictionary.doc2bow(dictionary,text)
+    topics = list(model.inference([bow])[0][0])
+    return topics
