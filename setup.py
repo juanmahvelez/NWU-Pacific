@@ -19,6 +19,7 @@ requirements = [
     'ipykernel',
     'jupyter',
     'azure-storage',
+    'azure',
     'tables'
 ]
 
