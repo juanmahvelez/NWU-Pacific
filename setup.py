@@ -18,7 +18,6 @@ requirements = [
     'configparser',
     'ipykernel',
     'jupyter',
-    'azure-storage',
     'azure',
     'tables'
 ]
