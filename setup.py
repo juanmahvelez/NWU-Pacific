@@ -19,7 +19,9 @@ requirements = [
     'ipykernel',
     'jupyter',
     'azure',
-    'tables'
+    'tables',
+    'scikit-learn',
+    'xgboost>=0.80'
 ]
 
 extras_require = {
