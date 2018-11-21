@@ -23,6 +23,10 @@ def tokenize(document, stem=True, stemmer=SnowballStemmer('english'),
         document = remove_punctuation(document)
         for word in document.lower().split():
             if word not in stoplist and len(word) > 3:
-                tokens.append(lemmatize_stemming(word, stemmer)
+                tokens.append(lemmatize_stemming(word, stemmer))
         return tokens
+
+
+
+
 
