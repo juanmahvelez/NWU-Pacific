@@ -1,0 +1,11 @@
+{
+    "object_dir": "D:\\Data\\NWU-Pacific\\output\\",
+    "model_dir": "D:\\Data\\NWU-Pacific\\models\\",
+    "log_dir": "D:\\Data\\NWU-Pacific\\logs\\",
+    "model_type": "LdaModel",
+    "training_frac": 0.7,
+    "model_args": {
+        "alpha": "k/50",
+        "passes": 10
+    }
+}
