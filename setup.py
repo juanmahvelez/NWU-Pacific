@@ -21,7 +21,9 @@ requirements = [
     'azure',
     'tables',
     'scikit-learn',
-    'xgboost>=0.80'
+    'xgboost>=0.80',
+    'matplotlib==2.1.2',
+    'seaborn'
 ]
 
 extras_require = {
