@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#Based modules
+#Base modules
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -17,6 +17,39 @@ from sklearn.neighbors import KNeighborsClassifier
 
 from gensim.sklearn_api import LdaTransformer
 
+import sys
+
+workingdirectory = "C:\\Users\\Jeff Jarrard\\Documents\\GitHub\\NWU-Pacific\\NWU-Pacific" #Windows format
+cfpbpath = "D:\\Data\\CFPB\\Consumer_Complaints.csv"
+datapath = "D:\\Data\\NWU-Pacific\\"
+ldaconfigfile = "C:\\Users\\Jeff Jarrard\\Documents\\GitHub\\NWU-Pacific\\NWU-Pacific\\processing\\configurations\\lda.json"
+ #'/Users/juanhernandez/Development/NWU-Pacific/NWU-Pacific/processing/configurations/lda.json'
+topicshdf = "D:\\Data\\NWU-Pacific\\topics.hdf"
+#'/Users/juanhernandez/Development/NWU-Pacific/NWU-Pacific/' #Mac format
+#print(sys.path) if you need to check to make sure all dependencies are loaded.
+sys.path.insert(0,workingdirectory)
+
+df_orig = pd.read_csv(cfpbpath)
+df_topics = pd.read_hdf(topicshdf)
+df_vectors = pd.read_hdf()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Example code from sklearn text
 
 X_train = np.array([ [158, 64], [170, 86], [183, 84], [191, 80], [155, 49], [163, 59], [180, 67], [158, 54], [170, 67] ])
 y_train = ['male', 'male', 'male', 'male', 'female', 'female', 'female',  'female', 'female']
@@ -60,6 +93,26 @@ print('Accuracy: %s' % mlm.accuracy_score(y_test_binarized,predictions_binarized
 print('Precision: %s' % mlm.precision_score(y_test_binarized,predictions_binarized))
 print('Recall: %s' % mlm.recall_score(y_test_binarized,predictions_binarized))
 print('F1 Score: %s' % mlm.f1_score(y_test_binarized,predictions_binarized))
+
+
+from processing import semantic_models, tokenize
+
+df = pd.read_csv(cfpbpath)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
