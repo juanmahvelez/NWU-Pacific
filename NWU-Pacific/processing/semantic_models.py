@@ -8,14 +8,14 @@ random.seed(0)
 def make_dictionary(texts, object_dir=None):
     dictionary = corpora.Dictionary(texts)
     if object_dir is not None:
-        with open(object_dir + 'nostop_dictionary.pkl', 'w+') as f:
+        with open(object_dir + 'dictionary.pkl', 'w+') as f:
                 pickle.dump(dictionary, f)
     return dictionary
 
 def make_corpus(texts, dictionary, object_dir=None):
     corpus = [dictionary.doc2bow(text) for text in texts]
     if object_dir is not None:
-        with open(object_dir + 'nostop_corpus.pkl', 'w+') as f:
+        with open(object_dir + 'corpus.pkl', 'w+') as f:
             pickle.dump(corpus, f)
     return corpus
 
@@ -61,7 +61,7 @@ def train(parameters, corpus_training, dictionary, k):
     supported_model_types = ['LdaModel',
                              'HdpModel']
     if parameters['model_type'] not in supported_model_types:
-        raise ValueError("Currently only supporting %s" % supported_model_types)
+        raise ValueError, "Currently only supporting %s" % supported_model_types
 
     parameters['model_args']['id2word'] = dictionary
     parameters['model_args']['corpus'] = corpus_training
@@ -74,7 +74,8 @@ def train(parameters, corpus_training, dictionary, k):
         #parameters['model_args']['K']=k
         model = HdpModel(**parameters['model_args'])
 
-    model.save(parameters['model_dir'] + parameters['model_name'] + '.model')
+    with open(parameters['model_dir'] + parameters['model_name'] + '.pkl', 'w+') as f:
+        pickle.dump(f, model)
 
     return model
 
@@ -87,7 +88,7 @@ def evaluate(parameters, corpus_evaluation, model):
     """
     supported_model_types = ['LdaModel']
     if parameters['model_type'] not in supported_model_types:
-        print("Perplexity evaluation only supports %s" % supported_model_types)
+        print "Perplexity evaluation only supports %s" % supported_model_types
         return None
     else:
         return model.log_perplexity(corpus_evaluation)

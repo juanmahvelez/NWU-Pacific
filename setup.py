@@ -18,7 +18,13 @@ requirements = [
     'configparser',
     'ipykernel',
     'jupyter',
-    'azure.storage.file'
+    'azure',
+    'tables',
+    'scikit-learn',
+    'xgboost>=0.80',
+    'matplotlib==2.1.2',
+    'seaborn',
+    'pyldavis'
 ]
 
 extras_require = {

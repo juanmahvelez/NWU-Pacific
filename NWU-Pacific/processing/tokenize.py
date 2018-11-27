@@ -15,7 +15,6 @@ def remove_punctuation(s, exclude = string.punctuation):
     table = string.maketrans("","")
     return s.translate(table, exclude)
 
-
 def tokenize(document, stem=True, stemmer=SnowballStemmer('english'),
              stoplist=gensim.parsing.preprocessing.STOPWORDS):
     if type(document) == str:
@@ -25,8 +24,3 @@ def tokenize(document, stem=True, stemmer=SnowballStemmer('english'),
             if word not in stoplist and len(word) > 3:
                 tokens.append(lemmatize_stemming(word, stemmer))
         return tokens
-
-
-
-
-
