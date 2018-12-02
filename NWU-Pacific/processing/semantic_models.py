@@ -75,7 +75,7 @@ def train(parameters, corpus_training, dictionary, k):
         model = HdpModel(**parameters['model_args'])
 
     with open(parameters['model_dir'] + parameters['model_name'] + '.pkl', 'w+') as f:
-        pickle.dump(f, model)
+        pickle.dump(model, f)
 
     return model
 
